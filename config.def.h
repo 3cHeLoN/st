@@ -7,6 +7,7 @@
  */
 static char *font = "monospace:size=12:antialias=true:autohint=true";
 static char *font2[] = { "JoyPixels:pixelsize=12:antialias=true:autohint=true" };
+
 static int borderpx = 2;
 
 /*
