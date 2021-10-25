@@ -7,7 +7,7 @@
  */
 static char *font = "Iosevka:size=13:antialias=true:autohint=true";
 /* Spare fonts */
-static char *font2[] = { "JoyPixels:pixelsize=12:antialias=true:autohint=true" };
+static char *font2[] = { "JoyPixels:size=13:antialias=true:autohint=true" };
 
 static int borderpx = 2;
 
@@ -97,10 +97,35 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 1.0; //0.95;
+float alpha = 0.92;
+
+// paper color light theme
+static const char *colorname_papercolor[] = {
+    "#eeeeee",
+    "#af0000",
+    "#008700",
+    "#5f8700",
+    "#0087af",
+    "#878787",
+    "#005f87",
+    "#444444",
+
+    "#bcbcbc",
+    "#d70000",
+    "#d70087",
+    "#8700af",
+    "#d75f00",
+    "#d75f00",
+    "#005faf",
+    "#005f87",
+    [255] = 0,
+    "#eeeeee",
+    "#4d4d4d",
+};
 
 /* Terminal colors (16 first used in escape sequence) */
-static const char *colorname[] = {
+// Nord theme
+static const char *colorname_nord[] = {
     "#3b4252", /* black   */
     "#bf616a", /* red     */
     "#a3be8c", /* green   */
@@ -125,6 +150,33 @@ static const char *colorname[] = {
     /* more colors can be added after 255 to use with DefaultXX */
     "#2e3440", /* background */
     "#d8dee9", /* foreground */
+};
+
+static const char *colorname[] = {
+      "#1c1c1c", /* black   */
+      "#af005f", /* red     */
+      "#5faf00", /* green   */
+      "#d7af5f", /* yellow  */
+      "#5fafd7", /* blue    */
+      "#808080", /* magenta */
+      "#d7875f", /* cyan    */
+      "#d0d0d0", /* white   */
+  
+      /* 8 bright colors */
+      "#585858", /* black   */
+      "#5faf5f", /* red     */
+      "#afd700", /* green   */
+      "#af87d7", /* yellow  */
+      "#ffaf00", /* blue    */
+      "#ff5faf", /* magenta */
+      "#00afaf", /* cyan    */
+      "#5f8787", /* white   */                                                                                                                                                               
+                                                                                                                                                                                             
+      [255] = 0,                                                                                                                                                                             
+                                                                                                                                                                                             
+      /* more colors can be added after 255 to use with DefaultXX */                                                                                                                         
+      "#1c1c1c", /* background */                                                                                                                                                            
+      "#d0d0d0", /* foreground */                                                                                                                                                            
 };
 
 /*
