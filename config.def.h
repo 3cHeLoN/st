@@ -5,9 +5,9 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Iosevka:size=13:antialias=true:autohint=true";
+static char *font = "mono:size=12:antialias=true:autohint=true";
 /* Spare fonts */
-static char *font2[] = { "JoyPixels:size=13:antialias=true:autohint=true" };
+static char *font2[] = { "JoyPixels:size=12:antialias=true:autohint=true" };
 
 static int borderpx = 2;
 
@@ -152,7 +152,7 @@ static const char *colorname_nord[] = {
     "#d8dee9", /* foreground */
 };
 
-static const char *colorname[] = {
+static const char *colorname_papercolor_dark[] = {
       "#1c1c1c", /* black   */
       "#af005f", /* red     */
       "#5faf00", /* green   */
@@ -179,14 +179,45 @@ static const char *colorname[] = {
       "#d0d0d0", /* foreground */                                                                                                                                                            
 };
 
+// papercolor dark
+static const char *colorname[] = {
+    "#262626",
+    "#af87af",
+    "#dfaf5f",
+    "#00afaf",
+    "#df875f",
+    "#afdf00",
+    "#5fafdf",
+    "#d0d0d0",
+    "#808080",
+    "#af87af",
+    "#dfaf5f",
+    "#00afaf",
+    "#df875f",
+    "#afdf00",
+    "#5fafdf",
+    "#f3f3f3"
+};
+ 
+
+ /*
+  * Default colors (colorname index)
+- * foreground, background, cursor, reverse cursor
++ * foreground, background, cursor
+  */
+unsigned int defaultfg = 7;
+unsigned int defaultbg = 0;
+static unsigned int defaultcs = 7;
+static unsigned int defaultrcs = 0;
+
 /*
  * Default colors (colorname index)
  * foreground, background, cursor
  */
-unsigned int defaultfg = 257;
-unsigned int defaultbg = 256;
-static unsigned int defaultcs = 257;
-static unsigned int defaultrcs = 256;
+//unsigned int defaultfg = 257;
+//unsigned int defaultbg = 256;
+//static unsigned int defaultcs = 257;
+//static unsigned int defaultrcs = 256;
 
 /*
  * Colors used, when the specific fg == defaultfg. So in reverse mode this
