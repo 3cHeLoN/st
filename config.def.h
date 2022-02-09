@@ -98,6 +98,31 @@ unsigned int tabspaces = 8;
 /* bg opacity */
 float alpha = 1.0; //0.95;
 
+// paper color light theme
+static const char *colorname_papercolor[] = {
+    "#eeeeee",
+    "#af0000",
+    "#008700",
+    "#5f8700",
+    "#0087af",
+    "#878787",
+    "#005f87",
+    "#444444",
+
+    "#bcbcbc",
+    "#d70000",
+    "#d70087",
+    "#8700af",
+    "#d75f00",
+    "#d75f00",
+    "#005faf",
+    "#005f87",
+    [255] = 0,
+    "#eeeeee",
+    "#4d4d4d",
+};
+>>>>>>> e85bbfd (Mistake in config.def.h)
+
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
     /* 8 normal colors */
@@ -124,8 +149,6 @@ static const char *colorname[] = {
     [256] = "#282a36", /* background */
     [257] = "#f8f8f2", /* foreground */
 };
-
-
 /*
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
