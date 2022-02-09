@@ -110,7 +110,6 @@ static const char *colorname_papercolor[] = {
     "#005f87",
     "#444444",
 
-<<<<<<< HEAD
     "#bcbcbc",
     "#d70000",
     "#d70087",
@@ -122,15 +121,6 @@ static const char *colorname_papercolor[] = {
     [255] = 0,
     "#eeeeee",
     "#4d4d4d",
-=======
-	[255] = 0,
-
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
-	"gray90", /* default foreground colour */
-	"black", /* default background colour */
->>>>>>> master
 };
 
 /* Terminal colors (16 first used in escape sequence) */
@@ -217,24 +207,17 @@ static const char *colorname[] = {
   */
 unsigned int defaultfg = 7;
 unsigned int defaultbg = 0;
-static unsigned int defaultcs = 7;
+unsigned int defaultcs = 7;
 static unsigned int defaultrcs = 0;
 
 /*
  * Default colors (colorname index)
  * foreground, background, cursor
  */
-<<<<<<< HEAD
 //unsigned int defaultfg = 257;
 //unsigned int defaultbg = 256;
 //static unsigned int defaultcs = 257;
 //static unsigned int defaultrcs = 256;
-=======
-unsigned int defaultfg = 258;
-unsigned int defaultbg = 259;
-unsigned int defaultcs = 256;
-static unsigned int defaultrcs = 257;
->>>>>>> master
 
 /*
  * Colors used, when the specific fg == defaultfg. So in reverse mode this
