@@ -5,9 +5,9 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "mono:size=12:antialias=true:autohint=true";
+static char *font = "Agave:size=20:antialias=true:autohint=true";
 /* Spare fonts */
-static char *font2[] = { "JoyPixels:size=12:antialias=true:autohint=true" };
+static char *font2[] = { "JoyPixels:size=18:antialias=true:autohint=true" };
 
 static int borderpx = 2;
 
@@ -100,7 +100,7 @@ unsigned int tabspaces = 8;
 float alpha = 0.92;
 
 // paper color light theme
-static const char *colorname_papercolor[] = {
+static const char *colorname_paper_light[] = {
     "#eeeeee",
     "#af0000",
     "#008700",
@@ -152,7 +152,8 @@ static const char *colorname_nord[] = {
     "#d8dee9", /* foreground */
 };
 
-static const char *colorname_papercolor_dark[] = {
+// paper color dark
+static const char *colorname[] = {
       "#1c1c1c", /* black   */
       "#af005f", /* red     */
       "#5faf00", /* green   */
@@ -180,24 +181,24 @@ static const char *colorname_papercolor_dark[] = {
 };
 
 // papercolor dark
-static const char *colorname[] = {
-    "#262626",
-    "#af87af",
-    "#dfaf5f",
-    "#00afaf",
-    "#df875f",
-    "#afdf00",
-    "#5fafdf",
-    "#d0d0d0",
-    "#808080",
-    "#af87af",
-    "#dfaf5f",
-    "#00afaf",
-    "#df875f",
-    "#afdf00",
-    "#5fafdf",
-    "#f3f3f3"
-};
+// static const char *colorname[] = {
+//     "#262626",
+//     "#af87af",
+//     "#dfaf5f",
+//     "#00afaf",
+//     "#df875f",
+//     "#afdf00",
+//     "#5fafdf",
+//     "#d0d0d0",
+//     "#808080",
+//     "#af87af",
+//     "#dfaf5f",
+//     "#00afaf",
+//     "#df875f",
+//     "#afdf00",
+//     "#5fafdf",
+//     "#f3f3f3"
+// };
  
 
  /*
