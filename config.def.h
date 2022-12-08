@@ -99,7 +99,7 @@ unsigned int tabspaces = 8;
 float alpha = 1.0; //0.95;
 
 // paper color light theme
-static const char *colorname_papercolor[] = {
+static const char *colorname_paper_light[] = {
     "#eeeeee",
     "#af0000",
     "#008700",
@@ -121,7 +121,6 @@ static const char *colorname_papercolor[] = {
     "#eeeeee",
     "#4d4d4d",
 };
->>>>>>> e85bbfd (Mistake in config.def.h)
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
@@ -134,7 +133,7 @@ static const char *colorname[] = {
     [5] = "#ff79c6", /* magenta */
     [6] = "#8be9fd", /* cyan    */
     [7] = "#bbbbbb", /* white   */
- 
+
     /* 8 bright colors */
     [8]  = "#44475a", /* black   */
     [9]  = "#ff5555", /* red     */
