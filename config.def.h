@@ -5,7 +5,9 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Agave:size=20:antialias=true:autohint=true";
+//static char *font = "Inconsolata:style=Medium:size=22:antialias=true:autohint=true";
+//static char *font = "Agave:size=22:antialias=true:autohint=true";
+static char *font = "Fira Code:style=Medium,Regular:size=19:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = { "JoyPixels:size=18:antialias=true:autohint=true" };
 
@@ -97,7 +99,151 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.92;
+//float alpha = 0.92;
+float alpha = 1;
+
+static const *colorname_1[] = {
+    "#282c34",
+    "#e06c75",
+    "#98c379",
+    "#e5c07b",
+    "#61afef",
+    "#c678dd",
+    "#56b6c2",
+    "#abb2bf",
+
+    "#282c34",
+    "#e06c75",
+    "#98c379",
+    "#e5c07b",
+    "#61afef",
+    "#c678dd",
+    "#56b6c2",
+    "#abb2bf",
+};
+
+/* Gruxbox */
+static const *colorname[] = {
+	[0] = "#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
+ 	[1] = "#cc241d", /* red     */
+ 	[2] = "#98971a", /* green   */
+ 	[3] = "#d79921", /* yellow  */
+ 	[4] = "#458588", /* blue    */
+ 	[5] = "#b16286", /* magenta */
+ 	[6] = "#689d6a", /* cyan    */
+ 	[7] = "#a89984", /* white   */
+ 	[8]  = "#928374", /* black   */
+ 	[9]  = "#fb4934", /* red     */
+ 	[10] = "#b8bb26", /* green   */
+ 	[11] = "#fabd2f", /* yellow  */
+ 	[12] = "#83a598", /* blue    */
+ 	[13] = "#d3869b", /* magenta */
+ 	[14] = "#8ec07c", /* cyan    */
+ 	[15] = "#ebdbb2", /* white   */
+};
+
+// Gruvbox
+static const *colorname_gruvlight[] = {
+    /* 8 normal colors */
+ 	[0] = "#fbf1c7", /* hard contrast: #f9f5d7 / soft contrast: #f2e5bc */
+ 	[1] = "#cc241d", /* red     */
+ 	[2] = "#98971a", /* green   */
+ 	[3] = "#d79921", /* yellow  */
+ 	[4] = "#458588", /* blue    */
+ 	[5] = "#b16286", /* magenta */
+ 	[6] = "#689d6a", /* cyan    */
+ 	[7] = "#7c6f64", /* white   */
+
+    /* 8 bright colors */
+ 	[8]  = "#928374", /* black   */
+ 	[9]  = "#9d0006", /* red     */
+ 	[10] = "#79740e", /* green   */
+ 	[11] = "#b57614", /* yellow  */
+ 	[12] = "#076678", /* blue    */
+ 	[13] = "#8f3f71", /* magenta */
+ 	[14] = "#427b58", /* cyan    */
+ 	[15] = "#3c3836", /* white   */
+
+};
+
+
+// Nord theme
+static const *colorname_nord2[] = {
+    /* 8 normal colors */
+	"#3b4252", /* black   */
+	"#bf616a", /* red     */
+	"#a3be8c", /* green   */
+	"#ebcb8b", /* yellow  */
+	"#81a1c1", /* blue    */
+	"#b48ead", /* magenta */
+	"#88c0d0", /* cyan    */
+	"#e5e9f0", /* white   */
+
+    /* 8 bright colors */
+	"#4c566a", /* black   */
+	"#bf616a", /* red     */
+	"#a3be8c", /* green   */
+	"#ebcb8b", /* yellow  */
+	"#81a1c1", /* blue    */
+	"#b48ead", /* magenta */
+	"#8fbcbb", /* cyan    */
+	"#eceff4", /* white   */
+
+    [255] = 0,
+
+	"#d8dee9", /* default foreground colour */
+	"#2e3440", /* default background colour */
+};
+
+
+// Solarized light.
+static const char *colorname_sollight[] = {
+	"#eee8d5",  /*  0: black    */
+	"#dc322f",  /*  1: red      */
+	"#859900",  /*  2: green    */
+	"#b58900",  /*  3: yellow   */
+	"#268bd2",  /*  4: blue     */
+	"#d33682",  /*  5: magenta  */
+	"#2aa198",  /*  6: cyan     */
+	"#073642",  /*  7: white    */
+	"#fdf6e3",  /*  8: brblack  */
+	"#cb4b16",  /*  9: brred    */
+	"#93a1a1",  /* 10: brgreen  */
+	"#839496",  /* 11: bryellow */
+	"#657b83",  /* 12: brblue   */
+	"#6c71c4",  /* 13: brmagenta*/
+	"#586e75",  /* 14: brcyan   */
+	"#002b36",  /* 15: brwhite  */
+ 	[255] = 0,
+};
+
+/* Terminal colors (dracula) */
+static const char *colorname_dracula[] = {
+    /* 8 normal colors */
+    [0] = "#000000", /* black   */
+    [1] = "#ff5555", /* red     */
+    [2] = "#50fa7b", /* green   */
+    [3] = "#f1fa8c", /* yellow  */
+    [4] = "#bd93f9", /* blue    */
+    [5] = "#ff79c6", /* magenta */
+    [6] = "#8be9fd", /* cyan    */
+    [7] = "#bbbbbb", /* white   */
+                                  
+    /* 8 bright colors */
+    [8]  = "#44475a", /* black   */
+    [9]  = "#ff5555", /* red     */
+    [10] = "#50fa7b", /* green   */
+    [11] = "#f1fa8c", /* yellow  */
+    [12] = "#bd93f9", /* blue    */
+    [13] = "#ff79c6", /* magenta */
+    [14] = "#8be9fd", /* cyan    */
+    [15] = "#ffffff", /* white   */
+                                   
+    /* special colors */
+    [256] = "#282a36", /* background */
+    [257] = "#f8f8f2", /* foreground */
+};
+
 
 // paper color light theme
 static const char *colorname_paper_light[] = {
@@ -119,7 +265,7 @@ static const char *colorname_paper_light[] = {
     "#005faf",
     "#005f87",
     [255] = 0,
-    "#eeeeee",
+    //"#eeeeee",
     "#4d4d4d",
 };
 
@@ -153,7 +299,7 @@ static const char *colorname_nord[] = {
 };
 
 // paper color dark
-static const char *colorname[] = {
+static const char *colorname_dark[] = {
       "#1c1c1c", /* black   */
       "#af005f", /* red     */
       "#5faf00", /* green   */
@@ -206,10 +352,10 @@ static const char *colorname[] = {
 - * foreground, background, cursor, reverse cursor
 + * foreground, background, cursor
   */
-unsigned int defaultfg = 7;
+unsigned int defaultfg = 15;
 unsigned int defaultbg = 0;
-unsigned int defaultcs = 7;
-static unsigned int defaultrcs = 0;
+unsigned int defaultcs = 15;
+static unsigned int defaultrcs = 257;
 
 /*
  * Default colors (colorname index)
