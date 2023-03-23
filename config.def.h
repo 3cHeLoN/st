@@ -123,7 +123,7 @@ static const *colorname_1[] = {
 };
 
 /* Gruxbox */
-static const *colorname[] = {
+static const *colorname_gruvbox[] = {
 	[0] = "#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
  	[1] = "#cc241d", /* red     */
  	[2] = "#98971a", /* green   */
@@ -218,7 +218,7 @@ static const char *colorname_sollight[] = {
 };
 
 /* Terminal colors (dracula) */
-static const char *colorname_dracula[] = {
+static const char *colorname[] = {
     /* 8 normal colors */
     [0] = "#000000", /* black   */
     [1] = "#ff5555", /* red     */
@@ -352,9 +352,9 @@ static const char *colorname_dark[] = {
 - * foreground, background, cursor, reverse cursor
 + * foreground, background, cursor
   */
-unsigned int defaultfg = 15;
-unsigned int defaultbg = 0;
-unsigned int defaultcs = 15;
+unsigned int defaultfg = 257;
+unsigned int defaultbg = 256;
+unsigned int defaultcs = 257;
 static unsigned int defaultrcs = 257;
 
 /*
