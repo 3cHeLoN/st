@@ -228,16 +228,11 @@ static const char *colorname_paperdark[] = {
     "#5fafdf",
     "#f3f3f3"
 };
- 
 
 /*
  * Default colors (colorname index)
  * foreground, background, cursor
  */
-//unsigned int defaultfg = 257;
-//unsigned int defaultbg = 256;
-//static unsigned int defaultcs = 257;
-//static unsigned int defaultrcs = 256;
 
 /*
  * Colors used, when the specific fg == defaultfg. So in reverse mode this
