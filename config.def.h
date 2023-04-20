@@ -7,8 +7,12 @@
  */
 //static char *font = "Inconsolata:style=Medium:size=22:antialias=true:autohint=true";
 //static char *font = "Agave:size=22:antialias=true:autohint=true";
-static char *font = "Fira Code:style=Medium,Regular:size=11:antialias=true:autohint=true";
+static char *font = "FiraCode Nerd Font Mono:style=Regular:size=11:antialias=true:autohint=true";
 //static char *font = "JetBrainsMono Nerd Font:style=Medium,Regular:size=11:antialias=true:autohint=true";
+//static char *font = "Meslo LG M:style=Regular:size=11:antialias=true:autohint=true";
+//static char *font = "agave:style=Regular:size=12:antialias=true:autohint=true";
+//static char *font = "Roboto Mono:style=Regular:size=11:antialias=true:autohint=true";
+//static char *font = "Comic Code Ligatures:style=Regular:size=11:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = { "JoyPixels:size=11:antialias=true:autohint=true" };
 
@@ -100,151 +104,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-//float alpha = 0.92;
-float alpha = 1;
-
-static const *colorname_1[] = {
-    "#282c34",
-    "#e06c75",
-    "#98c379",
-    "#e5c07b",
-    "#61afef",
-    "#c678dd",
-    "#56b6c2",
-    "#abb2bf",
-
-    "#282c34",
-    "#e06c75",
-    "#98c379",
-    "#e5c07b",
-    "#61afef",
-    "#c678dd",
-    "#56b6c2",
-    "#abb2bf",
-};
-
-/* Gruxbox */
-static const *colorname_gruvbox[] = {
-	[0] = "#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
- 	[1] = "#cc241d", /* red     */
- 	[2] = "#98971a", /* green   */
- 	[3] = "#d79921", /* yellow  */
- 	[4] = "#458588", /* blue    */
- 	[5] = "#b16286", /* magenta */
- 	[6] = "#689d6a", /* cyan    */
- 	[7] = "#a89984", /* white   */
- 	[8]  = "#928374", /* black   */
- 	[9]  = "#fb4934", /* red     */
- 	[10] = "#b8bb26", /* green   */
- 	[11] = "#fabd2f", /* yellow  */
- 	[12] = "#83a598", /* blue    */
- 	[13] = "#d3869b", /* magenta */
- 	[14] = "#8ec07c", /* cyan    */
- 	[15] = "#ebdbb2", /* white   */
-};
-
-// Gruvbox
-static const *colorname_gruvlight[] = {
-    /* 8 normal colors */
- 	[0] = "#fbf1c7", /* hard contrast: #f9f5d7 / soft contrast: #f2e5bc */
- 	[1] = "#cc241d", /* red     */
- 	[2] = "#98971a", /* green   */
- 	[3] = "#d79921", /* yellow  */
- 	[4] = "#458588", /* blue    */
- 	[5] = "#b16286", /* magenta */
- 	[6] = "#689d6a", /* cyan    */
- 	[7] = "#7c6f64", /* white   */
-
-    /* 8 bright colors */
- 	[8]  = "#928374", /* black   */
- 	[9]  = "#9d0006", /* red     */
- 	[10] = "#79740e", /* green   */
- 	[11] = "#b57614", /* yellow  */
- 	[12] = "#076678", /* blue    */
- 	[13] = "#8f3f71", /* magenta */
- 	[14] = "#427b58", /* cyan    */
- 	[15] = "#3c3836", /* white   */
-
-};
-
-
-// Nord theme
-static const *colorname_nord2[] = {
-    /* 8 normal colors */
-	"#3b4252", /* black   */
-	"#bf616a", /* red     */
-	"#a3be8c", /* green   */
-	"#ebcb8b", /* yellow  */
-	"#81a1c1", /* blue    */
-	"#b48ead", /* magenta */
-	"#88c0d0", /* cyan    */
-	"#e5e9f0", /* white   */
-
-    /* 8 bright colors */
-	"#4c566a", /* black   */
-	"#bf616a", /* red     */
-	"#a3be8c", /* green   */
-	"#ebcb8b", /* yellow  */
-	"#81a1c1", /* blue    */
-	"#b48ead", /* magenta */
-	"#8fbcbb", /* cyan    */
-	"#eceff4", /* white   */
-
-    [255] = 0,
-
-	"#d8dee9", /* default foreground colour */
-	"#2e3440", /* default background colour */
-};
-
-
-// Solarized light.
-static const char *colorname_sollight[] = {
-	"#eee8d5",  /*  0: black    */
-	"#dc322f",  /*  1: red      */
-	"#859900",  /*  2: green    */
-	"#b58900",  /*  3: yellow   */
-	"#268bd2",  /*  4: blue     */
-	"#d33682",  /*  5: magenta  */
-	"#2aa198",  /*  6: cyan     */
-	"#073642",  /*  7: white    */
-	"#fdf6e3",  /*  8: brblack  */
-	"#cb4b16",  /*  9: brred    */
-	"#93a1a1",  /* 10: brgreen  */
-	"#839496",  /* 11: bryellow */
-	"#657b83",  /* 12: brblue   */
-	"#6c71c4",  /* 13: brmagenta*/
-	"#586e75",  /* 14: brcyan   */
-	"#002b36",  /* 15: brwhite  */
- 	[255] = 0,
-};
-
-/* Terminal colors (dracula) */
-static const char *colorname[] = {
-    /* 8 normal colors */
-    [0] = "#000000", /* black   */
-    [1] = "#ff5555", /* red     */
-    [2] = "#50fa7b", /* green   */
-    [3] = "#f1fa8c", /* yellow  */
-    [4] = "#bd93f9", /* blue    */
-    [5] = "#ff79c6", /* magenta */
-    [6] = "#8be9fd", /* cyan    */
-    [7] = "#bbbbbb", /* white   */
-                                  
-    /* 8 bright colors */
-    [8]  = "#44475a", /* black   */
-    [9]  = "#ff5555", /* red     */
-    [10] = "#50fa7b", /* green   */
-    [11] = "#f1fa8c", /* yellow  */
-    [12] = "#bd93f9", /* blue    */
-    [13] = "#ff79c6", /* magenta */
-    [14] = "#8be9fd", /* cyan    */
-    [15] = "#ffffff", /* white   */
-                                   
-    /* special colors */
-    [256] = "#282a36", /* background */
-    [257] = "#f8f8f2", /* foreground */
-};
-
+float alpha = 1.0; //0.92;
 
 // paper color light theme
 static const char *colorname_paper_light[] = {
@@ -299,8 +159,30 @@ static const char *colorname_nord[] = {
     "#d8dee9", /* foreground */
 };
 
-// paper color dark
-static const char *colorname_dark[] = {
+/* Gruvbox dark */
+static const char *colorname_gruvd[] = {
+    /* 8 normal colors */
+ 	[0] = "#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
+ 	[1] = "#cc241d", /* red     */
+ 	[2] = "#98971a", /* green   */
+ 	[3] = "#d79921", /* yellow  */
+ 	[4] = "#458588", /* blue    */
+ 	[5] = "#b16286", /* magenta */
+ 	[6] = "#689d6a", /* cyan    */
+ 	[7] = "#a89984", /* white   */
+
+ 	/* 8 normal colors */
+ 	[8]  = "#928374", /* black   */
+ 	[9]  = "#fb4934", /* red     */
+ 	[10] = "#b8bb26", /* green   */
+ 	[11] = "#fabd2f", /* yellow  */
+ 	[12] = "#83a598", /* blue    */
+ 	[13] = "#d3869b", /* magenta */
+ 	[14] = "#8ec07c", /* cyan    */
+ 	[15] = "#ebdbb2", /* white   */
+ };
+
+static const char *colorname_dracula[] = {
       "#1c1c1c", /* black   */
       "#af005f", /* red     */
       "#5faf00", /* green   */
@@ -328,35 +210,25 @@ static const char *colorname_dark[] = {
 };
 
 // papercolor dark
-// static const char *colorname[] = {
-//     "#262626",
-//     "#af87af",
-//     "#dfaf5f",
-//     "#00afaf",
-//     "#df875f",
-//     "#afdf00",
-//     "#5fafdf",
-//     "#d0d0d0",
-//     "#808080",
-//     "#af87af",
-//     "#dfaf5f",
-//     "#00afaf",
-//     "#df875f",
-//     "#afdf00",
-//     "#5fafdf",
-//     "#f3f3f3"
-// };
+static const char *colorname_paperdark[] = {
+    "#262626",
+    "#af87af",
+    "#dfaf5f",
+    "#00afaf",
+    "#df875f",
+    "#afdf00",
+    "#5fafdf",
+    "#d0d0d0",
+    "#808080",
+    "#af87af",
+    "#dfaf5f",
+    "#00afaf",
+    "#df875f",
+    "#afdf00",
+    "#5fafdf",
+    "#f3f3f3"
+};
  
-
- /*
-  * Default colors (colorname index)
-- * foreground, background, cursor, reverse cursor
-+ * foreground, background, cursor
-  */
-unsigned int defaultfg = 257;
-unsigned int defaultbg = 256;
-unsigned int defaultcs = 257;
-static unsigned int defaultrcs = 257;
 
 /*
  * Default colors (colorname index)
@@ -716,3 +588,31 @@ static char ascii_printable[] =
 	" !\"#$%&'()*+,-./0123456789:;<=>?"
 	"@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_"
 	"`abcdefghijklmnopqrstuvwxyz{|}~";
+
+static char *colorname[] = {
+  /* 8 normal colors */
+  [0] = "#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
+  [1] = "#ea6962", /* red     */
+  [2] = "#a9b665", /* green   */
+  [3] = "#d8a657", /* yellow  */
+  [4] = "#7daea3", /* blue    */
+  [5] = "#d3869b", /* magenta */
+  [6] = "#89b482", /* cyan    */
+  [7] = "#d4be98", /* white   */
+
+  /* 8 bright colors */
+  [8]  = "#928374", /* black   */
+  [9]  = "#ef938e", /* red     */
+  [10] = "#bbc585", /* green   */
+  [11] = "#e1bb7e", /* yellow  */
+  [12] = "#9dc2ba", /* blue    */
+  [13] = "#e1acbb", /* magenta */
+  [14] = "#a7c7a2", /* cyan    */
+  [15] = "#e2d3ba", /* white   */
+};
+
+unsigned int defaultfg = 15;
+unsigned int defaultbg = 0;
+unsigned int defaultcs = 15;
+static unsigned int defaultrcs = 257;
+
