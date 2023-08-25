@@ -8,6 +8,7 @@
 //static char *font = "Inconsolata:style=Medium:size=22:antialias=true:autohint=true";
 //static char *font = "Agave:size=22:antialias=true:autohint=true";
 static char *font = "Fira Code:style=Medium,Regular:size=11:antialias=true:autohint=true";
+//static char *font = "JetBrainsMono Nerd Font:style=Medium,Regular:size=11:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = { "JoyPixels:size=11:antialias=true:autohint=true" };
 
