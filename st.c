@@ -705,8 +705,10 @@ execsh(char *cmd, char **args)
 	setenv("HOME", pw->pw_dir, 1);
 	setenv("TERM", termname, 1);
 
+	//signal(SIGUSR1,  SIG_DFL);
+	//signal(SIGUSR2,  SIG_DFL);
 	signal(SIGCHLD, SIG_DFL);
-	signal(SIGHUP, SIG_DFL);
+	//signal(SIGHUP, SIG_DFL);
 	signal(SIGINT, SIG_DFL);
 	signal(SIGQUIT, SIG_DFL);
 	signal(SIGTERM, SIG_DFL);
@@ -2748,3 +2750,4 @@ redraw(void)
 	tfulldirt();
 	draw();
 }
+

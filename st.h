@@ -119,6 +119,9 @@ void *xmalloc(size_t);
 void *xrealloc(void *, size_t);
 char *xstrdup(const char *);
 
+void set_light_theme(void);
+void set_dark_theme(void);
+
 /* config.h globals */
 extern char *utmp;
 extern char *scroll;

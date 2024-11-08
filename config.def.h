@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Fira Code:style=Medium,Regular:size=12:antialias=true:autohint=true";
+static char *font = "FiraCode Nerd Font Mono:style=Regular:size=12:antialias=true:autohint=true";
 static char *font2[] = { "JoyPixels:size=12:antialias=true:autohint=true" };
 
 static int borderpx = 2;
@@ -126,30 +126,102 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 7;
-unsigned int defaultbg = 258;
+unsigned int defaultfg = 256;
+unsigned int defaultbg = 257;
 unsigned int defaultcs = 256;
 static unsigned int defaultrcs = 257;
 
-/* Terminal colors for alternate (light) palette */
+static const char * dark_colors[] = {
+    // tokyonight-storm
+    "#414868",
+    "#F7768E",
+    "#9ECE6A",
+    "#E0AF68",
+    "#7AA2F7",
+    "#BB9AF7",
+    "#7DCFFF",
+    "#C0CAF5",
+    "#414868",
+    "#F7768E",
+    "#9ECE6A",
+    "#E0AF68",
+    "#7AA2F7",
+    "#BB9AF7",
+    "#7DCFFF",
+    "#C0CAF5",
+
+    [256] = "#C0CAF5",
+    [257] = "#24283B",
+};
+
+static const char * light_colors[] = {
+    // tokyonight-day
+    "#A1A6C5",
+    "#F52A65",
+    "#587539",
+    "#8C6C3E",
+    "#2E7DE9",
+    "#9854F1",
+    "#007197",
+    "#3760BF",
+    "#A1A6C5",
+    "#F52A65",
+    "#587539",
+    "#8C6C3E",
+    "#2E7DE9",
+    "#9854F1",
+    "#007197",
+    "#3760BF",
+    
+    [256] = "#3760BF", // foreground,
+    [257] = "#E1E2E7", // background,
+};
+
+
+static const char * colorname[] = {
+    // tokyonight-storm
+    "#414868",
+    "#F7768E",
+    "#9ECE6A",
+    "#E0AF68",
+    "#7AA2F7",
+    "#BB9AF7",
+    "#7DCFFF",
+    "#C0CAF5",
+    "#414868",
+    "#F7768E",
+    "#9ECE6A",
+    "#E0AF68",
+    "#7AA2F7",
+    "#BB9AF7",
+    "#7DCFFF",
+    "#C0CAF5",
+
+    [256] = "#C0CAF5",
+    [257] = "#24283B",
+};
+
+
+
+// solarized dark
 static const char *altcolorname[] = {
-	/* solarized light */
-	"#eee8d5",  /*  0: black    */
-	"#dc322f",  /*  1: red      */
-	"#859900",  /*  2: green    */
-	"#b58900",  /*  3: yellow   */
-	"#268bd2",  /*  4: blue     */
-	"#d33682",  /*  5: magenta  */
-	"#2aa198",  /*  6: cyan     */
-	"#073642",  /*  7: white    */
-	"#fdf6e3",  /*  8: brblack  */
-	"#cb4b16",  /*  9: brred    */
-	"#93a1a1",  /* 10: brgreen  */
-	"#839496",  /* 11: bryellow */
-	"#657b83",  /* 12: brblue   */
-	"#6c71c4",  /* 13: brmagenta*/
-	"#586e75",  /* 14: brcyan   */
-	"#002b36",  /* 15: brwhite  */
+    /* solarized dark */
+    "#073642",  /*  0: black    */
+    "#dc322f",  /*  1: red      */
+    "#859900",  /*  2: green    */
+    "#b58900",  /*  3: yellow   */
+    "#268bd2",  /*  4: blue     */
+    "#d33682",  /*  5: magenta  */
+    "#2aa198",  /*  6: cyan     */
+    "#eee8d5",  /*  7: white    */
+    "#002b36",  /*  8: brblack  */
+    "#cb4b16",  /*  9: brred    */
+    "#586e75",  /* 10: brgreen  */
+    "#657b83",  /* 11: bryellow */
+    "#839496",  /* 12: brblue   */
+    "#6c71c4",  /* 13: brmagenta*/
+    "#93a1a1",  /* 14: brcyan   */
+    "#fdf6e3",  /* 15: brwhite  */
 };
 
 /*
@@ -218,6 +290,7 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
+	{ XK_ANY_MOD,           XK_F6,          swapcolors,     {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
 	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
 	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
@@ -494,7 +567,7 @@ static char ascii_printable[] =
 	"@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_"
 	"`abcdefghijklmnopqrstuvwxyz{|}~";
 
-static char *colorname[] = {
+static char *colorname_old[] = {
   /* 8 normal colors */
   [0] = "#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
   [1] = "#ea6962", /* red     */
@@ -516,8 +589,8 @@ static char *colorname[] = {
   [15] = "#e2d3ba", /* white   */
 };
 
-unsigned int defaultfg = 15;
-unsigned int defaultbg = 0;
-unsigned int defaultcs = 15;
+unsigned int defaultfg = 256;
+unsigned int defaultbg = 257;
+unsigned int defaultcs = 256;
 static unsigned int defaultrcs = 257;
 

@@ -788,7 +788,9 @@ sixd_to_16bit(int x)
 
 const char* getcolorname(int i)
 {
-    return (usealtcolors) ?  altcolorname[i] : colorname[i];
+    //return (usealtcolors) ?  altcolorname[i] : colorname[i];
+    //return (usealtcolors) ?  dark_colors[i] : light_colors[i];
+    return (usealtcolors) ?  light_colors[i] : dark_colors[i];
 }
 
 int
@@ -2162,6 +2164,22 @@ run(void)
 	}
 }
 
+
+void
+set_light_theme(void)
+{
+	printf("Setting light theme\n");
+	//memcpy(colorname, light_colors, sizeof colorname);
+	//redraw();
+}
+
+void
+set_dark_theme(void)
+{
+	//memcpy(colorname, dark_colors, sizeof colorname);
+	//redraw();
+}
+
 void
 usage(void)
 {
@@ -2178,6 +2196,7 @@ usage(void)
 int
 main(int argc, char *argv[])
 {
+	signal(SIGHUP, (void*)swapcolors);
 	xw.l = xw.t = 0;
 	xw.isfixed = False;
 	xsetcursor(cursorshape);
@@ -2235,6 +2254,9 @@ run:
 
 	if (!opt_title)
 		opt_title = (opt_line || !opt_cmd) ? "st" : opt_cmd[0];
+
+	//signal(SIGUSR1, (void*)set_light_theme);
+	//	signal(SIGUSR2, (void*)set_dark_theme);
 
 	setlocale(LC_CTYPE, "");
 	XSetLocaleModifiers("");
