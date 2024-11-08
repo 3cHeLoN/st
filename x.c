@@ -194,6 +194,8 @@ static int match(uint, uint);
 static void run(void);
 static void usage(void);
 
+static void check_theme(void);
+
 static void (*handler[LASTEvent])(XEvent *) = {
 	[KeyPress] = kpress,
 	[ClientMessage] = cmessage,
@@ -261,6 +263,41 @@ static char *opt_title = NULL;
 static uint buttons; /* bit field of pressed buttons */
 
 int usealtcolors = 0; /* 1 to use alternate palette */
+
+void
+check_theme(void)
+{
+	const char *home_dir = getenv("HOME");
+	if  (home_dir == NULL)
+	{
+		printf("Could not retrieve the home directory.\n");
+		exit(1);
+	}
+
+	char file_path[512];
+	snprintf(file_path, sizeof(file_path), "%s/.theme", home_dir);
+
+	// Assume light theme.
+	usealtcolors = 1;
+
+	FILE *file = fopen(file_path, "r");
+	if (file == NULL)
+	{
+		return;
+	}
+
+	char buffer[10];
+
+	int found = 0;
+
+	while (fgets(buffer, sizeof(buffer), file) != NULL)
+	{
+		if (strstr(buffer, "dark") != NULL)
+		{
+			usealtcolors = 0;
+		}
+	}	
+}
 
 void
 clipcopy(const Arg *dummy)
@@ -2196,7 +2233,7 @@ usage(void)
 int
 main(int argc, char *argv[])
 {
-	signal(SIGHUP, (void*)swapcolors);
+	check_theme();
 	xw.l = xw.t = 0;
 	xw.isfixed = False;
 	xsetcursor(cursorshape);
@@ -2255,8 +2292,7 @@ run:
 	if (!opt_title)
 		opt_title = (opt_line || !opt_cmd) ? "st" : opt_cmd[0];
 
-	//signal(SIGUSR1, (void*)set_light_theme);
-	//	signal(SIGUSR2, (void*)set_dark_theme);
+	signal(SIGUSR1, (void*)check_theme);
 
 	setlocale(LC_CTYPE, "");
 	XSetLocaleModifiers("");

@@ -5,8 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "FiraCode Nerd Font Mono:style=Regular:size=12:antialias=true:autohint=true";
-static char *font2[] = { "JoyPixels:size=12:antialias=true:autohint=true" };
+static char *font = "FiraCode Nerd Font Mono:style=Regular:size=10:antialias=true:autohint=true";
+static char *font2[] = { "JoyPixels:size=10:antialias=true:autohint=true" };
 
 static int borderpx = 2;
 
@@ -97,39 +97,6 @@ unsigned int tabspaces = 8;
 
 /* bg opacity */
 float alpha = 1.0;
-
-// paper color light theme
-static const char *colorname[] = {
-    "#eeeeee",
-    "#af0000",
-    "#008700",
-    "#5f8700",
-    "#0087af",
-    "#878787",
-    "#005f87",
-    "#444444",
-
-    "#bcbcbc",
-    "#d70000",
-    "#d70087",
-    "#8700af",
-    "#d75f00",
-    "#d75f00",
-    "#005faf",
-    "#005f87",
-    [255] = 0,
-    //"#eeeeee",
-    "#4d4d4d",
-};
-
-/*
- * Default colors (colorname index)
- * foreground, background, cursor, reverse cursor
- */
-unsigned int defaultfg = 256;
-unsigned int defaultbg = 257;
-unsigned int defaultcs = 256;
-static unsigned int defaultrcs = 257;
 
 static const char * dark_colors[] = {
     // tokyonight-storm
@@ -566,28 +533,6 @@ static char ascii_printable[] =
 	" !\"#$%&'()*+,-./0123456789:;<=>?"
 	"@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_"
 	"`abcdefghijklmnopqrstuvwxyz{|}~";
-
-static char *colorname_old[] = {
-  /* 8 normal colors */
-  [0] = "#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
-  [1] = "#ea6962", /* red     */
-  [2] = "#a9b665", /* green   */
-  [3] = "#d8a657", /* yellow  */
-  [4] = "#7daea3", /* blue    */
-  [5] = "#d3869b", /* magenta */
-  [6] = "#89b482", /* cyan    */
-  [7] = "#d4be98", /* white   */
-
-  /* 8 bright colors */
-  [8]  = "#928374", /* black   */
-  [9]  = "#ef938e", /* red     */
-  [10] = "#bbc585", /* green   */
-  [11] = "#e1bb7e", /* yellow  */
-  [12] = "#9dc2ba", /* blue    */
-  [13] = "#e1acbb", /* magenta */
-  [14] = "#a7c7a2", /* cyan    */
-  [15] = "#e2d3ba", /* white   */
-};
 
 unsigned int defaultfg = 256;
 unsigned int defaultbg = 257;
